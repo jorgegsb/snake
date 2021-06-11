@@ -43,11 +43,11 @@ export default class Snake {
   }
 
   changeDirection(direction) {
-    if (direction !== this._OPPOSITE_DIRECTIONS[this._direction]) {
-      this._previousDirection = this._direction;
-      this._direction = direction;
-      this._directionHasChanged = true;
-    }
+        if (direction !== this._OPPOSITE_DIRECTIONS[this._direction] && direction !== this._direction) {
+            this._previousDirection = this._direction;
+            this._direction = direction;
+            this._directionHasChanged = true;
+        }
   }
 
   hasCollisionItself(){
